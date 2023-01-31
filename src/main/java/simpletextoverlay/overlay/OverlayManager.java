@@ -12,6 +12,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraftforge.fml.ModList;
 
 import simpletextoverlay.config.OverlayConfig;
+import simpletextoverlay.overlay.botwmcs.MoneyInfo;
 
 public class OverlayManager {
 
@@ -52,6 +53,9 @@ public class OverlayManager {
                     else {
                         skip = true;
                     }
+                    break;
+                case "money":
+                    lines.add(new MoneyInfo("", lineNum));
                     break;
             }
 

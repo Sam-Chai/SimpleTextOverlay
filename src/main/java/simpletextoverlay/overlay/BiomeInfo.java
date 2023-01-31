@@ -16,7 +16,7 @@ import simpletextoverlay.util.FontHelper;
 
 import java.util.Objects;
 
-public class BiomeInfo extends Info {
+class BiomeInfo extends Info {
 
     public BiomeInfo(String label, int lineNum) {
         super(label, lineNum);

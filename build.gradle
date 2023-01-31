@@ -43,7 +43,11 @@ version = "${minecraft_version}-${mod_version}"
 archivesBaseName = "${mod_name}"
 def modid = "${modid}"
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '17'
+//sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '17'
+java {
+    archivesBaseName = 'homeostatic'
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
 
 minecraft {
     mappings channel: "${mappings_channel}", version: mappings_version
@@ -182,21 +186,21 @@ task deobfJar(type: Jar) {
 }
 
 // Jar Signing
-import net.minecraftforge.gradle.common.tasks.SignJar
-
-task signJar(type: SignJar, dependsOn: jar) {
-    dependsOn 'reobfJar'
-
-    // Skip the task if our secret data isn't available
-    onlyIf {
-        project.hasProperty('keyStore')
-    }
-
-    keyStore = project.keyStore // This needs to be a path to the keystore file
-    alias = project.keyStoreAlias
-    storePass = project.keyStorePass
-    keyPass = project.keyStoreKeyPass
-    inputFile = jar.archiveFile
-    outputFile = jar.archiveFile
-}
+//import net.minecraftforge.gradle.common.tasks.SignJar
+//
+//task signJar(type: SignJar, dependsOn: jar) {
+//    dependsOn 'reobfJar'
+//
+//    // Skip the task if our secret data isn't available
+//    onlyIf {
+//        project.hasProperty('keyStore')
+//    }
+//
+//    keyStore = project.keyStore // This needs to be a path to the keystore file
+//    alias = project.keyStoreAlias
+//    storePass = project.keyStorePass
+//    keyPass = project.keyStoreKeyPass
+//    inputFile = jar.archiveFile
+//    outputFile = jar.archiveFile
+//}
 

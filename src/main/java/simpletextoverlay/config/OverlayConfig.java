@@ -33,7 +33,7 @@ public final class OverlayConfig {
 
     private static final List<String> positions = Arrays.asList("TOPLEFT", "TOPRIGHT", "BOTTOMLEFT", "BOTTOMRIGHT");
     private static final List<String> fieldList = Arrays.asList("fields");
-    private static final String[] fieldStrings = new String[] { "light", "time", "days", "foot", "biome", "season" };
+    private static final String[] fieldStrings = new String[] { "light", "time", "days", "foot", "biome", "season", "money", "restart_info" };
     private static final String[] defaultFields = new String[] { "light", "time", "foot", "biome", "season" };
     private static List<String> sortedFields;
     private static Color lightColorDark = ColorHelper.decode("#b02e26");
@@ -70,6 +70,7 @@ public final class OverlayConfig {
     public final ConfigValue<String> daysColor;
     public final BooleanValue showCompass;
     public final IntValue compassOpacity;
+
 
     static {
         Pair<OverlayConfig,ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(OverlayConfig::new);
@@ -264,5 +265,6 @@ public final class OverlayConfig {
     public static Color daysColor() {
         return daysColorDecoded;
     }
+
 
 }
