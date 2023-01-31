@@ -44,6 +44,7 @@ public final class OverlayConfig {
     private static Color footColorDecoded;
     private static Color biomeColorDecoded;
     private static Color daysColorDecoded;
+    private static Color moneyColorDecoded;
     private static final Predicate<Object> hexValidator = s -> s instanceof String
             && ((String) s).matches("#[a-zA-Z\\d]{6}");
     private static final Predicate<Object> hexRangeValidator = s -> s instanceof String
@@ -68,6 +69,7 @@ public final class OverlayConfig {
     public final ConfigValue<String> biomeColor;
     public final ConfigValue<String> daysLabel;
     public final ConfigValue<String> daysColor;
+    public final ConfigValue<String> moneyColor;
     public final BooleanValue showCompass;
     public final IntValue compassOpacity;
 
@@ -144,6 +146,9 @@ public final class OverlayConfig {
         daysColor = builder
                 .comment("Days color (Format: #3c44a9)")
                 .define("daysColor", "#3c44a9", hexValidator);
+        moneyColor = builder
+                .comment("Money color (Format: #5d7c15)")
+                .define("moneyColor", "#5d7c15", hexValidator);
     }
 
     public static boolean enabled() {
@@ -190,6 +195,7 @@ public final class OverlayConfig {
         footColorDecoded = ColorHelper.decode(CONFIG.footColor.get());
         biomeColorDecoded = ColorHelper.decode(CONFIG.biomeColor.get());
         daysColorDecoded = ColorHelper.decode(CONFIG.daysColor.get());
+        moneyColorDecoded = ColorHelper.decode(CONFIG.moneyColor.get());
 
         sortedFields = fields;
     }
@@ -266,5 +272,8 @@ public final class OverlayConfig {
         return daysColorDecoded;
     }
 
+    public static Color moneyColor() {
+        return moneyColorDecoded;
+    }
 
 }

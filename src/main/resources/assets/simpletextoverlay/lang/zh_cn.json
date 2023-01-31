@@ -1,0 +1,15 @@
+{
+  "desc.simpletextoverlay.early_spring": "早春",
+  "desc.simpletextoverlay.mid_spring": "仲春",
+  "desc.simpletextoverlay.late_spring": "晚春",
+  "desc.simpletextoverlay.early_summer": "初夏",
+  "desc.simpletextoverlay.mid_summer": "仲夏",
+  "desc.simpletextoverlay.late_summer": "晚夏",
+  "desc.simpletextoverlay.early_autumn": "初秋",
+  "desc.simpletextoverlay.mid_autumn": "中秋",
+  "desc.simpletextoverlay.late_autumn": "深秋",
+  "desc.simpletextoverlay.early_winter": "初冬",
+  "desc.simpletextoverlay.mid_winter": "隆冬",
+  "desc.simpletextoverlay.late_winter": "晚冬",
+  "desc.simpletextoverlay.botwmcs.moneyHave": "钱包余额: %s"
+}
