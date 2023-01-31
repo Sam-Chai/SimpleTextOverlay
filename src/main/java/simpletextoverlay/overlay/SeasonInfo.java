@@ -43,7 +43,7 @@ public class SeasonInfo extends Info {
         if (BiomeConfig.enablesSeasonalEffects(Objects.requireNonNull(mc.level).getBiome(pos))) {
             Season season = SeasonHelper.getSeasonState(mc.level).getSeason();
             SubSeason subSeason = SeasonHelper.getSeasonState(mc.level).getSubSeason();
-            ResourceLocation seasonIcon = new ResourceLocation(SimpleTextOverlay.MODID, "textures/seasons/" + "summer" + ".png");
+            ResourceLocation seasonIcon = new ResourceLocation(SimpleTextOverlay.MODID, "textures/seasons/" + season.toString().toLowerCase() + ".png");
 
             if (BiomeConfig.enablesSeasonalEffects(mc.level.getBiome(pos))) {
                 TranslatableComponent seasonName = new TranslatableComponent("desc." + SimpleTextOverlay.MODID + "." + subSeason.name().toLowerCase());
@@ -52,13 +52,13 @@ public class SeasonInfo extends Info {
                 FontHelper.draw(mc, matrix, seasonName, x, y, ColorHelper.getSeasonColor(subSeason));
 
                 // Draw season icons
-                int iconX = x - 13;
-                int iconY = y - 4;
+                int iconX = x - 10;
+                int iconY = y;
                 RenderSystem.setShader(GameRenderer::getPositionTexShader);
                 RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                 RenderSystem.setShaderTexture(0, seasonIcon);
                 RenderSystem.enableBlend();
-                GuiComponent.blit(matrix, iconX, iconY, 0, 0, 16, 16, 480, 480);
+                GuiComponent.blit(matrix, iconX, iconY, 0, 0, 9, 9, 9, 9);
             }
 
 

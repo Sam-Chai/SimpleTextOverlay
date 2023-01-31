@@ -39,14 +39,14 @@ public class MoneyInfo extends Info {
 
         // Image draw
         ResourceLocation MONEY_ICON;
-        int iconX = x - 13;
-        int iconY = y - 4;
+        int iconX = x - 10;
+        int iconY = y;
         MONEY_ICON = new ResourceLocation("simpletextoverlay", "textures/botwmcs/gold_coin.png");
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, MONEY_ICON);
         RenderSystem.enableBlend();
-        GuiComponent.blit(matrix, iconX, iconY, 0, 0, 16, 16, 16, 16);
+        GuiComponent.blit(matrix, iconX, iconY, 0, 0, 9, 9, 9, 9);
 
 
 
