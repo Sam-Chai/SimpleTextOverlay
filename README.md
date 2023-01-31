@@ -19,3 +19,5 @@ All Downloads:
 
 + [Simple Text Overlay Wiki](https://github.com/wendall911/SimpleTextOverlay/wiki)
 + [Simple Text Overlay Curseforge Page](https://minecraft.curseforge.com/projects/simpletextoverlay)
+
+# Used on BotWMCS Persist Realms Server
